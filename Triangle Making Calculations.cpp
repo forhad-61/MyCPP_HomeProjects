@@ -1,35 +1,61 @@
 /*
-THIS IS THE DRAFT PART OF THE FINISHED PROGRAM 
+FINISHED CODE OF THE PROJECT
 */
 
+// Writing a Triangle Making Calculations
 #include <iostream>
 
-void getWidth() {
-    std::cout << "Enter a width " << '\n';
+// Get the triangle's width from user
+int getWidth() {
+    std::cout << "Enter a width ";
     int widthValue{};
     std::cin >> widthValue;
+    return widthValue;
 }
 
-// same for getHeight
+// Get height from user
+int getHeight() {
+    std::cout << "Enter a height ";
+    int heightValue{};
+    std::cin >> heightValue;
+    return heightValue;
 
+}
+
+// Also get the hypotenuse
+int getHypotenuse() {
+    std::cout << "Enter a hypotenuse ";
+    int hypotenuseValue{};
+    std::cin >> hypotenuseValue;
+    return hypotenuseValue;
+}
+
+// function to calculate with 1.0/2 * w * h formula
 int calculateArea(int width, int height) {
     double areaValue{};
-    areaValue = 1/2 * width * height; // putting 1/2 returns 0. You'll have to use 1.0/2
-    return areaValue; // or do - return areaValue = 1/2 * width * height
+    areaValue = 1.0/2 * width * height;
+    std::cout << "The area of your triangle will be " << areaValue << '\n';
+    return areaValue;
 }
 
 int main() {
+
+    std::cout << "Enter a width, height & hypotenuse to see if you can make a triangle with them! \n";
+    std::cout << "=============================================================================== \n\n";
+
     int width{getWidth()};
-    int height{getWidth()};
-    int hypotenuse{} // create a function like getWidth() for hypotenuse
+    int height{getHeight()};
+    int hypotenuse{getHypotenuse()};
 
     if((width + height) < hypotenuse) {
-        std::cout << "Sorry, not possible" << '\n';
+        std::cout << "\nSorry, you can't :/ \nYour width & height must have to be greater than your hypotenuse!" << '\n';
     } else if((width + height) > hypotenuse) {
-        std::cout << "Yes, possible" << '\n';
-        std::cout << calculateArea();
+        std::cout << "\nCool! You can make a triangle from these length." << '\n';
+        calculateArea(width, height);
+    } else if((width + height) == hypotenuse) {
+        std::cout << "\nHumm, width & height's summation can't be equal to hypotenuse" << '\n';
     } else {
-        std::cout << "Sorry, something went wrong" << '\n';
+        std::cout << "\nSorry, something went wrong :(" << '\n';
     }
 
     return 0;
