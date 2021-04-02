@@ -1,5 +1,11 @@
 /*
 FINISHED CODE OF THE PROJECT
+
+===========
+* Make a program that asks the user to enter the height, width & hypotenuse for a triangle. 
+* Then the program will calculate to see if those width, height can make a triangle or not. 
+* If not, tell the user that unable to make a triangle. If possible, then return the calculation for Area of triangle to the user. 
+===========
 */
 
 // Writing a Triangle Making Calculations
