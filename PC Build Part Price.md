@@ -57,7 +57,7 @@ Without monitor - n$
 GG!  
 ~~Now go to shop & buy them yourself~~
 
-
+https://www.cpu-monkey.com/en/cpu_family-intel_core_i3-6 
 
 
 
