@@ -1,40 +1,40 @@
 #include <iostream>
+#include <string>
+#include <vector>
 
-void printer(int ray[], int size) {
-    std::cout << "In fucntion: ";
-    std::cout << "size: " << sizeof(ray) / sizeof(int);
-    for(int i = 0; i < size; i++) {
-        std::cout << ray[i];
-    }
-    std::cout << '\n';
-    std::cout << '\n';
+class User {
+    public:
+    std::string first_name{};
+    std::string last_name{};
+};
+
+int add_new(std::vector<User>, User user) {
+    for()
+    if()
+
 }
 
 int main() {
 
-    int array[] = {4, 8, 9, 6, 45, 1, 87, 7};
-    int size{8};
+    User billy;
+    User kelly;
+    User milly;
 
+    billy.first_name = "Billy";
+    billy.last_name = "Margaret";
 
-    std::cout << "Before function: \n";
-    std::cout << "size: " << sizeof(array) / sizeof(int);
-    for(int i = 0; i < size; i++) {
-        std::cout << array[i];
-    }
-    std::cout << '\n';
-    std::cout << '\n';
+    kelly.first_name = "Kelly";
+    kelly.last_name = "Abraham";
 
-    printer(array, size); // function call
+    milly.first_name = "Milly";
+    milly.last_name = "Jhonson";
 
-    std::cout << "After passing in function: \n";
-    std::cout << "size: " << sizeof(array) / sizeof(int);
-    for(int i = 0; i < size; i++) {
-        std::cout << array[i];
-    }
+    std::vector<User> userVec;
+    userVec.push_back(billy);
+    userVec.push_back(kelly);
+    userVec.push_back(milly);
 
-    std::cout << '\n';
-    std::cout << '\n';
-
+    add_new(userVec, milly);
 
     return 0;
 }
