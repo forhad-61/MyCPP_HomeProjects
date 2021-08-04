@@ -1,21 +1,25 @@
 #include <iostream>
 #include <vector>
 
-void vec_loop(std::vector<std::string> vec, vec.size()) {
-    for(auto i = 0; i < vecSize; i++) {
-        std::cout << vec[i] << '\n';
+void printVec(std::vector<int> pVec, int v) {
+    for(int i = 0; i < v; i++) {
+        std::cout << pVec.push_back(i);
     }
+
 }
 
 int main() {
 
-    std::vector<std::string> myString;
-    myString.push_back("New String 1");
-    myString.push_back("New String 2");
-    myString.push_back("New String 3");
+    std::vector<int> newVector {1, 2, 3};
 
-    vec_loop(myString, myString.size());
+    int x;
+    std::cout << "Enter a num: ";
+    std::cin >> x;
+    newVector.push_back(x);
 
+    std::cout << "\nnewVector size() - 1: " << newVector.size();
+
+    printVec(newVector, newVector.size());
 
     return 0;
 }
