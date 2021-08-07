@@ -1,25 +1,22 @@
 #include <iostream>
-#include <vector>
-
-void printVec(std::vector<int> pVec, int v) {
-    for(int i = 0; i < v; i++) {
-        std::cout << pVec.push_back(i);
-    }
-
-}
+#include <cmath> 
 
 int main() {
+    // which number is greater, based on user input
+    int x{}, y{}, sum{};
+    std::cout << "Enter 2 num: ";
+    std::cin >> x >> y;
+    
+    if
+    // we may need to use swap() too. 
+    //check if x is greater than y or vice versa using max(). It's probably in cmath header.
+    while(x <= y) {
+        sum += x;
+        ++x;
+    }
 
-    std::vector<int> newVector {1, 2, 3};
+    std::cout << sum;
 
-    int x;
-    std::cout << "Enter a num: ";
-    std::cin >> x;
-    newVector.push_back(x);
-
-    std::cout << "\nnewVector size() - 1: " << newVector.size();
-
-    printVec(newVector, newVector.size());
 
     return 0;
 }
