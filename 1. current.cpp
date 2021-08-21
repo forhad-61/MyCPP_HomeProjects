@@ -1,23 +1,24 @@
 #include <iostream>
-#include <vector>
+#include <string>
+using std::endl;
 
-int main()
-{
-    std::vector<std::string> item_list {"sword", "knife", "apple", "metal shard", "coal", "ruby stone" };
-    //std::cout << "Your 5th item is: " << item_list[5] << std::endl;
-    //item_list.push_back("copper");
-    //std::cout << "Last item is: " << item_list.back();
+class Employee {
+public:
+    std::string name{};
+    char grade{};
+    int employee_id{};
+    double salary{};
+    std::string title{};
 
-    std::cout << "Current total item: " << item_list.size() << std::endl;
+    void job_desc(std::string title) {
+        std::cout << name << " is a " << title << " in X Company.";
+    }
+};
 
-    std::cout << "Enter a desired item to add in your inventory: ";
-    std::string new_item;
-    std::cin >> new_item;
-    item_list.push_back(new_item);
+int main(){
 
-    std::cout << "Your newly added last element is: " << item_list.back() << std::endl;
-    std::cout << "Total item number is: " << item_list.size();
+    Employee Jhonson { "Peter Jhonson", 'S', 505, 3000, "Senior Sales Representative" };
+    Jhonson.job_desc(Jhonson.title);
 
-
-	return 0;
+    return 0;
 }
