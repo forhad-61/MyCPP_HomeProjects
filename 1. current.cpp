@@ -2,23 +2,29 @@
 #include <string>
 using std::endl;
 
-class Employee {
-public:
-    std::string name{};
-    char grade{};
-    int employee_id{};
-    double salary{};
-    std::string title{};
+class Fruit_bucket {
+private:
+    int number_of_orange{};
+    int number_of_banana{};
+    int number_of_mango{};
 
-    void job_desc(std::string title) {
-        std::cout << name << " is a " << title << " in X Company.";
+public:
+    Fruit_bucket(int orange = 0, int banana = 0, int mango = 0){
+        number_of_orange = orange;
+        number_of_banana = banana;
+        number_of_mango = mango;
+    }
+
+    int get_orange() {
+        return number_of_mango;
     }
 };
 
 int main(){
 
-    Employee Jhonson { "Peter Jhonson", 'S', 505, 3000, "Senior Sales Representative" };
-    Jhonson.job_desc(Jhonson.title);
+    Fruit_bucket Clara_bucket{1, 4};
+    std::cout << Clara_bucket.get_orange();
+
 
     return 0;
 }
