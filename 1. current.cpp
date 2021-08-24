@@ -2,32 +2,39 @@
 #include <string>
 using std::endl;
 
-class Employee {
+class Food_maker{
 private:
-    std::string name{};
-    char grade{};
-    int employee_id{};
-    double salary{};
-    std::string title{};
+    char m_cake_maker;
+    char m_blender;
+    char m_water_filter;
+    int m_number_of_serve;
 
 public:
-    Employee(std::string obj_name, char obj_grade, int obj_id, double obj_salary, std::string obj_title) {
-        name = obj_name;
-        grade = obj_grade;
-        employee_id = obj_id;
-        salary = obj_salary;
-        title = obj_title;
+    Food_maker(char cake, char blender, char filter, int total) :
+    m_cake_maker{cake},
+    m_blender{blender},
+    m_water_filter{filter},
+    m_number_of_serve{total} {
+
     }
 
-    void job_desc() {
-        std::cout << name << " is a " << title << " in X Company.";
+    int getTotal() {
+        return m_number_of_serve;
+    }
+
+    char getCake() { 
+        // remember to put the data type of the function. 
+        // Otherwise it prints the ascii value of char (67). 
+        // Putting no data type shows no complain from the compiler. 
+        return m_cake_maker;
     }
 };
 
 int main(){
 
-    Employee Jhonson { "Peter Jhonson", 'S', 505, 3000, "Senior Sales Representative" };
-    Jhonson.job_desc();
+    Food_maker Burger_home('C', 'B', 'F', 3);
+    std::cout << Burger_home.getTotal() << std::endl;
+    std::cout << Burger_home.getCake();
 
     return 0;
 }
