@@ -38,8 +38,8 @@ case 'a':
               << "    Memories like this never end\n"
               << "      No, they don't fade away\n" << std::endl;
               selection_tab();
-              get_input();
-              break;
+              get_input(); 
+              break; // terminates after taking input 
 case 'b':
     std::cout << "now in b";
     break;
