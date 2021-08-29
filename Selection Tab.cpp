@@ -9,6 +9,12 @@ void selection_tab() {
     std::cout << "x. terminate the program!" << std::endl << std::endl;
 }
 
+char get_input() {
+    char latter;
+    std::cin >> latter;
+    return latter;
+}
+
 int main() {
 
     std::cout << "=================================================" << std::endl;
@@ -18,10 +24,8 @@ int main() {
     std::cout << "Selection one option below by using the characters before them or press 'x' to terminate the program at anytime!" << std::endl << std::endl;
     selection_tab();
 
-    char latter;
-    std::cin >> latter;
 
-    switch(latter) {
+    switch(get_input()) {
 case 'a':
     std::cout << "\n         \"Close To The Sun\"\n";
     std::cout << "     ==========================" << std::endl;
@@ -33,10 +37,12 @@ case 'a':
               << "      Ever strong, ever brave\n"
               << "    Memories like this never end\n"
               << "      No, they don't fade away\n" << std::endl;
-              break;
               selection_tab();
+              get_input();
+              break;
 case 'b':
     std::cout << "now in b";
+    break;
     }
 
     return 0;
