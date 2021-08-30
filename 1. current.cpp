@@ -1,16 +1,13 @@
 #include <iostream>
-#include <algorithm>
-#include <vector>
 
 int main() {
 
-    std::vector<int> my_vec {5, 7, 9, 78, 46, 637, 81, 01, 3, 46, 12, 35, 11, 50, 202};
-    std::sort(std::begin(my_vec), std::end(my_vec));
-    unsigned int x{};
-    while(x < my_vec.size()) {
-        std::cout << my_vec[x] << std::endl;
-        ++x;
+    int x{10};
+    for(int i{}; i < x; --x) { 
+        std::cout << x << std::endl;
     }
+    // as long as 0(i) is less than 10, 9 & so on(x), 
+    // the loop will continue 
 
     return 0;
 }
