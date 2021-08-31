@@ -1,13 +1,25 @@
 #include <iostream>
 
+void print_pointer(int x) {
+    int* ptr = &x;
+    std::cout << "Pointer of " << x << " is " << ptr << std::endl;
+}
+
 int main() {
 
-    int x{10};
-    for(int i{}; i < x; --x) { 
-        std::cout << x << std::endl;
+    std::cout << "Enter number: ";
+    int x;
+    std::cin >> x;
+
+    std::cout << "\nPress m to call it's pointer - ";
+    char y;
+    std::cin >> y;
+
+    if(y == 'm') {
+        print_pointer(x);
+    } else {
+        std::cout << "Error! Something went wrong :/";
     }
-    // as long as 0(i) is less than 10, 9 & so on(x), 
-    // the loop will continue 
 
     return 0;
 }
