@@ -2,7 +2,7 @@
 #include<string>
 #include<vector>
 
-void loop(std::vector<int> &mys) {
+void loop(std::vector<std::string> &mys) {
     std::cout << "\nHere's what you have typed so far - " << std::endl;
     unsigned int x = mys.size();
     for(unsigned int i{}; i < x; i++) {
@@ -13,13 +13,13 @@ void loop(std::vector<int> &mys) {
 int main() {
 
     std::cout << "Welcome! Type numbers with space, 0 to exit." << std::endl;
-    std::vector<int> mys{};
+    std::vector<std::string> mys{};
 
-    int input{1};
-    while(input != 0) {
+    std::string input{"1"};
+    while(input != "0") {
         std::cin >> input;
         mys.push_back(input);
-        if(input == 0) {
+        if(input == "0") {
             loop(mys);
         }
     }
