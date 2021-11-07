@@ -1,24 +1,27 @@
-#include <iostream>
+#include<iostream>
+#include<string>
+#include<vector>
 
-void print_pointer(int x) {
-    int* ptr = &x;
-    std::cout << "Pointer of " << x << " is " << ptr << std::endl;
+void loop(std::vector<int> &mys) {
+    std::cout << "\nHere's what you have typed so far - " << std::endl;
+    unsigned int x = mys.size();
+    for(unsigned int i{}; i < x; i++) {
+        std::cout << mys[i] << std::endl;
+    }
 }
 
 int main() {
 
-    std::cout << "Enter number: ";
-    int x;
-    std::cin >> x;
+    std::cout << "Welcome! Type numbers with space, 0 to exit." << std::endl;
+    std::vector<int> mys{};
 
-    std::cout << "\nPress m to call it's pointer - ";
-    char y;
-    std::cin >> y;
-
-    if(y == 'm') {
-        print_pointer(x);
-    } else {
-        std::cout << "Error! Something went wrong :/";
+    int input{1};
+    while(input != 0) {
+        std::cin >> input;
+        mys.push_back(input);
+        if(input == 0) {
+            loop(mys);
+        }
     }
 
     return 0;
