@@ -1,28 +1,19 @@
-#include<iostream>
-#include<string>
-#include<vector>
+#include <iostream>
+#include <vector>
 
-void loop(std::vector<std::string> &mys) {
-    std::cout << "\nHere's what you have typed so far - " << std::endl;
-    unsigned int x = mys.size();
-    for(unsigned int i{}; i < x; i++) {
+void loop(std::vector<int> &mys) {
+    int counts = mys.size();
+    unsigned int x = static_cast<unsigned int>(counts);
+
+    for(unsigned i{}; i < x; i++) {
         std::cout << mys[i] << std::endl;
     }
 }
 
 int main() {
 
-    std::cout << "Welcome! Type numbers with space, 0 to exit." << std::endl;
-    std::vector<std::string> mys{};
-
-    std::string input{"1"};
-    while(input != "0") {
-        std::cin >> input;
-        mys.push_back(input);
-        if(input == "0") {
-            loop(mys);
-        }
-    }
+    std::vector<int> mys{1, 2, 3, 4, 5};
+    loop(mys);
 
     return 0;
 }
